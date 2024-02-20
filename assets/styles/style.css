@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+/* fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor01: #ffffff;
+    --cor01: #0f0f0f;
+    --cor01: #00ad6f;
+
+    --fonte1: "Saira", sans-serif;
+}
+
