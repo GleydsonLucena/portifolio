@@ -234,13 +234,14 @@ a {
 .projects-banner {
     display: flex;
     align-items: center;
-    background-image: url(../image/back.svg);
-    background-size: cover;
-    background-position: center center;
+    cursor: pointer;
     width: 100px;
     height: 150px;
     border-radius: 15px;
     box-shadow: 0px 0px 10px #00ad6d7c;
+    background-image: url(../image/back.svg);
+    background-size: cover;
+    background-position: center center;
 }
 
 .back {
@@ -270,6 +271,73 @@ a {
 }
 
 #explication-projects > #comment-projects {
-    
+    font-weight: 100;
+    color: var(--cor04);
+    text-shadow: 0px 0px 10px #00ad6dc2;
 }
 
+#explication-projects > p {
+    font-style: italic;
+    text-decoration: overline;
+    font-weight: 100;
+    font-size: .5em;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.37);
+    color: var(--cor01);
+}
+
+#estudies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logos-lang {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 500px;
+    height: 130px;
+}
+
+#logos-lang > svg {
+    cursor: pointer;
+    width: 120px;
+}
+
+#description-lang {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width: auto;  
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 10px #00ad6d2f;
+    background-color: var(--cor03);
+}
+
+#description-lang .text-hover {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 1em;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.37);
+    color: var(--cor01);
+}
+
+#html, #js, #css {display: none;}
+
+#contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--cor03);
+}
+
+#icon-contacts {
+    display: flex;
+    margin-bottom: 20px;
+    
+}
