@@ -7,7 +7,8 @@
 :root {
     --cor01: #ffffff;
     --cor02: #0f0f0f;
-    --cor03: #00ad6f;
+    --cor03: #1d1d1d;
+    --cor04: #00ad6f;
 
     --fonte1: "Saira", sans-serif;
 }
@@ -18,8 +19,80 @@
     box-sizing: border-box;
 }
 
+body,html {
+    font-size: 1.2em;
+    font-family: var(--fonte1);
+}
+
 body {
-    background-color: var(--cor02);
+    width: 99vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background: var(--cor02);
+}
+
+/* Caixa do conteúdo */
+
+#container {
+    background: var(--cor02);
+}
+
+/* Cabeçalho */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.24);
+    background: var(--cor02);
+}
+
+#nick-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+}
+
+#nick-logo > p {
+    font-size: 2.4em;
+    font-weight: bolder;
+    color: var(--cor04);
+    text-shadow: 0px 0px 10px  #00ad6d50;
+} 
+
+#nick-logo > p > a {
+    text-decoration: none;
+    color: var(--cor04);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.list-items {
+    cursor: pointer;
+    list-style: none;
+    font-weight: 500;
+    text-shadow: 0px 0px 8px #ffffff41;
+    color: var(--cor01);
+}
+
+#home {
+    
 }
 
 #projects-banner {
