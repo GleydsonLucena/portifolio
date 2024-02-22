@@ -6,8 +6,8 @@
 
 :root {
     --cor01: #ffffff;
-    --cor02: #0f0f0f;
-    --cor03: #1d1d1d;
+    --cor02: #0b0b0b;
+    --cor03: #0f0f0f;
     --cor04: #00ad6f;
 
     --fonte1: "Saira", sans-serif;
@@ -35,16 +35,20 @@ body {
 
 #container {
     background: var(--cor02);
+    padding-top: 80px;
 }
 
 /* Cabeçalho */
 
 #header {
+    position: fixed;
+    top: 0px;
+    width: 99vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.24);
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.13);
     background: var(--cor02);
 }
 
@@ -52,7 +56,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20%;
+    width: 30%;
     height: 100%;
 }
 
@@ -83,6 +87,10 @@ body {
     width: 100%;
 }
 
+a {
+    list-style: none;
+}
+
 .list-items {
     cursor: pointer;
     list-style: none;
@@ -92,8 +100,121 @@ body {
 }
 
 #home {
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    background: var(--cor03);
 }
+
+#name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    width: 40vw;
+}
+
+#name > h1 {
+    font-size: 2.1em;
+    font-weight: 400;
+    color: var(--cor04);
+    text-shadow: 0px 0px 10px #00ad6d59;
+}
+
+#name > h2 {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 100;
+    width: 29vw;
+    color: var(--cor01);
+    text-shadow: 0px 0px 8px #ffffff59;
+}
+
+#social-media {
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+}
+
+#about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 550px;
+    background: var(--cor02);
+}
+
+#about-container #sobremim {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 0px 80px 0px;
+    font-size: 2em;
+    color: var(--cor01);
+}
+
+#about-container #sobremim h3 {
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.397);
+}
+
+#about-container #sobremim p {
+    color: var(--cor04);
+    font-weight: bolder;
+    text-shadow: 0px 0px 8px #00ad6d94;
+}
+
+#about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50vw;
+    height: 350px;
+    margin: auto;
+}
+
+#description {
+    display: flex;
+    align-items: center;
+    width: 30vw;
+    padding: 20px;
+    border-radius: 15px 0px 0px 15px;
+    color: var(--cor01);
+    box-shadow: 0px 0px 10px #00ad6d2f;
+    background-color: var(--cor03);
+}
+
+#description > p {
+    
+    text-align: end;
+}
+
+#image-gleydson {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 10vw;
+}
+
+#image-gleydson > img{
+    width: 275px;
+    margin-left: 10px;
+    border-radius: 0px 15px 15px 0px;
+    box-shadow: 0px 0px 10px #00ad6d2f;
+
+}
+
+
 
 #projects-banner {
     display: flex;
@@ -116,7 +237,5 @@ body {
 #back > p {
     text-align: center;
     color: var(--cor02);
-    
-
 }
 
