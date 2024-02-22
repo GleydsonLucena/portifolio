@@ -16,3 +16,30 @@ body {
     background-color: var(--cor02);
 }
 
+#projects-banner {
+    display: flex;
+    align-items: flex-end;
+    background-image: url(../image/back-banner.jpg);
+    background-size: cover;
+    background-position: center left;
+    width: 100px;
+    height: 150px;
+}
+
+#back {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--cor01);
+    width: 100px;
+    transform: rotate(-40deg);
+    
+}
+
+#back > p {
+    text-align: center;
+    color: var(--cor02);
+    
+
+}
+
