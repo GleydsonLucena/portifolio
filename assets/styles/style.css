@@ -6,9 +6,13 @@
 
 :root {
     --cor01: #ffffff;
-    --cor01: #0f0f0f;
-    --cor01: #00ad6f;
+    --cor02: #0f0f0f;
+    --cor03: #00ad6f;
 
     --fonte1: "Saira", sans-serif;
+}
+
+body {
+    background-color: var(--cor02);
 }
 
