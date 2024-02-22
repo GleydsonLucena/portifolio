@@ -12,6 +12,12 @@
     --fonte1: "Saira", sans-serif;
 }
 
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--cor02);
 }
@@ -19,7 +25,7 @@ body {
 #projects-banner {
     display: flex;
     align-items: flex-end;
-    background-image: url(../image/back-banner.jpg);
+    background-image: url(../image/back.svg);
     background-size: cover;
     background-position: center left;
     width: 100px;
@@ -27,12 +33,10 @@ body {
 }
 
 #back {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     background-color: var(--cor01);
-    width: 100px;
-    transform: rotate(-40deg);
+    margin-bottom: 20px;
+    width: 100vw;
+    height: 20px;
     
 }
 
