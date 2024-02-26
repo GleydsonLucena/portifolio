@@ -89,6 +89,7 @@ body {
 
 a {
     list-style: none;
+    text-decoration: none;
 }
 
 .list-items {
@@ -171,7 +172,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 40px 0px;
+    margin: 70px 0px;
     font-size: 2em;
     color: var(--cor01);
 }
