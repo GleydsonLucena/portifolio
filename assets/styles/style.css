@@ -104,7 +104,8 @@ a {
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    height: 90vh;
+    height: auto;
+    padding: 28px 0px;
     background: var(--cor03);
 }
 
@@ -161,7 +162,8 @@ a {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height:650px;
+    height:auto;
+    padding-bottom: 50px;
     background: var(--cor02);
 }
 
@@ -169,7 +171,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 0px 80px 0px;
+    margin: 40px 0px;
     font-size: 2em;
     color: var(--cor01);
 }
@@ -191,14 +193,14 @@ a {
     justify-content: space-between;
     gap: 20px;
     width: 50vw;
-    height: 350px;
+    height: auto;
     margin: auto;
 }
 
 #description {
     display: flex;
     align-items: center;
-    height: 350px;
+    height: 290px;
     padding: 20px;
     border-radius: 15px 0px 0px 15px;
     color: var(--cor01);
@@ -218,14 +220,15 @@ a {
 }
 
 #image-gleydson > img{
-    width: 244px;
+    width: 200px;
     margin-left: 10px;
     border-radius: 0px 15px 15px 0px;
     box-shadow: 0px 0px 10px #00ad6d2f;
 }
 
 #projects {
-    height: 80vh;
+    height: auto;
+    padding: 5px 0px 20px 0px;
     background: var(--cor03);
 }
 
@@ -233,9 +236,11 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: auto;
     width: 500px;
-    height: 200px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 30px 0px;
     border-radius: 15px;
     box-shadow: 0px 0px 10px #00ad6d2f;
     background-color: var(--cor03);
@@ -277,7 +282,7 @@ a {
     justify-content: center;
     align-items: center;
     width: 500px;
-    margin: 20px auto;
+    margin: auto;
 }
 
 #explication-projects > #comment-projects {
