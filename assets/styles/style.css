@@ -371,5 +371,21 @@ footer {
 footer a {
     text-decoration: none;
     color: white;
-
 }
+
+/* Hover */
+
+.icon-hover
+{
+    transition: all .5s;
+}
+.icon-hover:hover
+{
+    -webkit-filter: drop-shadow(0px 0px 4px rgba(245, 245, 245, 0.5));
+    filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.5));
+}
+
+.underline-move:hover {
+    
+}
+
