@@ -365,7 +365,6 @@ a {
 footer {
     text-align: center;
     color: white;
-    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.13);
 }
 
 footer a {
@@ -385,20 +384,28 @@ footer a {
     filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.5));
 }
 
-
 .underline-move:hover {
-    animation: mymove 1s infinite;
+    animation: hover .5s infinite;
 }
 
-@keyframes mymove {
-    0%{
-        border-bottom: solid white;
-        opacity: 0;
+@keyframes hover {
+    0% {
+        border-bottom: 1px solid var(--cor01);
     }
-
+    50% {
+        border-bottom: 1px solid #00e490;
+    }
     100% {
-        border-bottom: solid var(--cor04);
-        opacity: 100;
+        border-bottom: 1px solid var(--cor04);
     }
+}
+
+.banner-hover {
+    transition: all 0.5s;
+}
+
+.banner-hover:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
