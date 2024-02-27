@@ -309,17 +309,20 @@ a {
 }
 
 #logos-lang {
+    position: relative;
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
-    width: 500px;
-    height: 130px;
+    gap: 20px;
+    width: auto;
+    height: auto;
+    margin: auto;
 }
 
 #logos-lang > svg {
     cursor: pointer;
-    width: 120px;
+    width: 130px;
 }
+ 
 
 #description-lang {
     display: flex;
@@ -407,5 +410,16 @@ footer a {
 .banner-hover:hover {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
+}
+
+#logo-html-hover{
+    display: inline;
+    background: transparent;
+}
+
+#logo-html-hover1 {
+    position: absolute;
+    display: none;
+    background: transparent;
 }
 
