@@ -312,12 +312,24 @@ a {
     display: flex;
     align-items: flex-start;
     width: auto;
-    margin: auto
+    margin: auto;
+    background-color: lightblue;
 }
 
 #logos-lang .logo-l {
     cursor: pointer;
-    width: 150px;
+}
+
+#logo-html-hover {
+    width: 295px;
+}
+#logo-css-hover {
+    position: relative;
+    top: -35px;
+    width: 370px;
+}
+#logo-js-hover {
+    width: 300px;
 }
 
 #description-lang {
