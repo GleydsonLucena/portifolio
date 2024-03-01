@@ -1,15 +1,19 @@
 const html = document.getElementById("logo-html-hover");
-const html1 = document.getElementById("logo-html-hover1");
 
-const msg = () => {
-    html.style.display = 'none'
-    html1.style.display = 'inline'
-}
-const msg1 = () => {
-    html1.style.display = 'none'
-    html.style.display = 'inline'
-}
+html.addEventListener('mouseover', msg=()=> {
+    html.src='assets/image/html-cor.svg';
+})
 
-html.addEventListener("mouseover", msg)
-// html.addEventListener("mouseout", msg1)
+html.addEventListener('mouseout', msg2=()=> {
+    html.src='assets/image/html-verde.svg';
+})
 
+const css = document.getElementById("logo-html-css");
+
+css.addEventListener('mouseover', msg=()=> {
+    css.src='assets/image/css-cor.svg';
+})
+
+css.addEventListener('mouseout', msg2=()=> {
+    css.src='assets/image/css-verde.svg';
+})

@@ -309,7 +309,6 @@ a {
 }
 
 #logos-lang {
-    position: relative;
     display: flex;
     align-items: flex-start;
     gap: 20px;
@@ -318,9 +317,16 @@ a {
     margin: auto;
 }
 
-#logos-lang > svg {
+#logos-lang img {
     cursor: pointer;
-    width: 130px;
+    width: 150px;
+    
+}
+
+#logos-lang img:last-child {
+    position: relative;
+    top: -7px;
+    width: 150px;
 }
  
 
@@ -412,14 +418,4 @@ footer a {
     transform: scale(1.2);
 }
 
-#logo-html-hover{
-    display: inline;
-    background: transparent;
-}
-
-#logo-html-hover1 {
-    position: absolute;
-    display: none;
-    background: transparent;
-}
 
