@@ -313,7 +313,6 @@ a {
     align-items: flex-start;
     gap: 20px;
     width: auto;
-    height: auto;
     margin: auto;
 }
 
@@ -325,9 +324,10 @@ a {
 
 #logos-lang img:last-child {
     position: relative;
-    top: -7px;
-    width: 150px;
+    top: 10px;
+    width: 130px;
 }
+
  
 
 #description-lang {
