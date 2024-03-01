@@ -311,31 +311,21 @@ a {
 #logos-lang {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
     width: auto;
-    margin: auto;
+    margin: auto
 }
 
-#logos-lang img {
+#logos-lang .logo-l {
     cursor: pointer;
     width: 150px;
-    
 }
-
-#logos-lang img:last-child {
-    position: relative;
-    top: 10px;
-    width: 130px;
-}
-
- 
 
 #description-lang {
     display: flex;
     justify-content: center;
     align-items: center;  
     width: auto;  
-    max-width: 600px;
+    max-width: 700px;
     padding: 20px;
     border-radius: 15px;
     margin: 50px auto;
@@ -346,7 +336,7 @@ a {
 #description-lang .text-hover {
     font-style: italic;
     font-weight: 100;
-    font-size: 1em;
+    font-size: .6em;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.37);
     color: var(--cor01);
 }
@@ -385,16 +375,16 @@ footer a {
 
 .icon-hover
 {
-    transition: all .5s;
+    transition: all .3s ease-out;
 }
 .icon-hover:hover
 {
-    -webkit-filter: drop-shadow(0px 0px 4px rgba(245, 245, 245, 0.5));
-    filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.5));
+    -webkit-filter: drop-shadow(0px 0px 4px rgba(245, 245, 245, 0.582));
+    filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.596));
 }
 
 .underline-move:hover {
-    animation: hover .5s infinite;
+    animation: hover .5s ease-in-out;
 }
 
 @keyframes hover {
@@ -410,12 +400,22 @@ footer a {
 }
 
 .banner-hover {
-    transition: all 0.5s;
+    transition: all .5s ease-in-out;
 }
 
 .banner-hover:hover {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#logo-html-hover:hover {
+    filter: drop-shadow(0 0px 10px#e6510040);
+}
+#logo-css-hover:hover {
+    filter: drop-shadow(0 0px 10px#0277BD40);
+}
+#logo-js-hover:hover {
+    filter: drop-shadow(0 0px 10px#FFD60040);
 }
 
 
