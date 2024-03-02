@@ -73,6 +73,14 @@
         height: 120px;
         font-size: 3em;
     }
+
+    #description-lang {
+        width: 1000px;
+    }
+
+    #description-lang .text-hover {
+        font-size: 1.5em;
+    }
 }
 
 
@@ -87,7 +95,6 @@
     }
     
     #home {
-        
         height: 100vh;
     }
     
