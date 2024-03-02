@@ -23,7 +23,8 @@
     }
 }
 
-@media screen and (min-width: 1261px) and (max-width: 2559px) {
+@media screen and (min-width: 1600px) and (max-width: 2559px) {
+    
     #header {
         width: 100vw;
         padding: 60px;
@@ -61,7 +62,7 @@
     }
 
     #description {
-        height: 700px;
+        height: 600px;
     }
 
     #description > p { 
@@ -69,7 +70,7 @@
     }
 
     #image-gleydson > img{
-        width: 485px;
+        width: 385px;
     }
 
     #projects {
@@ -96,6 +97,18 @@
     #explication-projects {
         height: 120px;
         font-size: 3em;
+    }
+
+    #logo-html-hover {
+        width: 195px;
+    }
+    #logo-css-hover {
+        position: relative;
+        top: -35px;
+        width: 270px;
+    }
+    #logo-js-hover {
+        width: 200px;
     }
 
     #description-lang {
