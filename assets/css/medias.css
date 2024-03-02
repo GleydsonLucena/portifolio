@@ -1,5 +1,29 @@
-@media screen and (min-width: 2560px) {
+
+
+@media screen and (min-width: 992px) and (max-width: 1260px) {
     
+    #header {
+        width: 100vw;
+    }
+
+    section {
+        width: 100vw;
+    }
+    
+    #home {
+        height: 100vh;
+    }
+    
+    #nick-logo {
+        width: 40%;
+    }
+
+    #navbar {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1261px) and (max-width: 2559px) {
     #header {
         width: 100vw;
         padding: 60px;
@@ -41,7 +65,7 @@
     }
 
     #description > p { 
-        font-size: 1.9em;
+        font-size: 1.6vw;
     }
 
     #image-gleydson > img{
@@ -75,34 +99,103 @@
     }
 
     #description-lang {
-        width: 1000px;
+        max-width: 80vw;
     }
 
     #description-lang .text-hover {
         font-size: 1.5em;
     }
+
+    footer p {
+        font-size: 1.5em;
+    }
 }
 
+@media screen and (min-width: 2560px) {
 
-@media screen and (min-width: 992px) and (max-width: 1260px) {
-    
     #header {
         width: 100vw;
+        padding: 60px;
     }
-
+    
     section {
         width: 100vw;
     }
-    
+
+    #nick-logo p {
+        font-size: 3em;
+    }
+
     #home {
         height: 100vh;
     }
-    
-    #nick-logo {
-        width: 40%;
+
+    #navbar li {
+        font-size: 1.5em;
     }
 
-    #navbar {
-        width: 50%;
+    #about-container {
+        height: 100vh;
+        padding-top: 70px;
+        padding-bottom: 8rem;
+    }
+
+    .tittle {
+        font-size: 3em;
+    }
+
+    #about-me {
+        width: 60vw;
+        height: auto;
+    }
+
+    #description {
+        height: 700px;
+    }
+
+    #description > p { 
+        font-size: 1.6vw;
+    }
+
+    #image-gleydson > img{
+        width: 485px;
+    }
+
+    #projects {
+        padding: 50px 0 80px 0;
+    }
+
+    #projects-zone {
+        width: 900px;
+        height: 400px;
+    }
+    .projects-banner{
+        width: 200px;
+        height: 250px;
+    }
+
+    .back {
+        height: 50px;
+    }
+
+    .back > p {
+        font-size: 24px;
+    }
+
+    #explication-projects {
+        height: 120px;
+        font-size: 3em;
+    }
+
+    #description-lang {
+        max-width: 80vw;
+    }
+
+    #description-lang .text-hover {
+        font-size: 1.5em;
+    }
+
+    footer p {
+        font-size: 1.5em;
     }
 }
