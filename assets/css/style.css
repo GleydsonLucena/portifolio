@@ -22,6 +22,7 @@
 body,html {
     font-size: 1.2em;
     font-family: var(--fonte1);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -100,12 +101,18 @@ a {
     color: var(--cor01);
 }
 
+#menu-hamb {
+    display: none;
+    color: white;
+    font-size: 2em;
+}
+
 #home {
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    height: auto;
+    height: 100vh;
     padding: 28px 0px;
     background: var(--cor03);
 }
@@ -118,19 +125,24 @@ a {
     width: 40vw;
 }
 
-#name > h1 {
+#container-nick {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+#name h1 {
     font-size: 4.1vw;
     font-weight: 400;
     color: var(--cor04);
     text-shadow: 0px 0px 10px #00ad6d59;
 }
 
-#name > h2 {
-    display: flex;
-    justify-content: flex-end;
+#name h2 {
+    align-self: flex-end;
     font-weight: 100;
     font-size: 2vw;
-    max-width: 100%;
     margin-right: 10px;
     color: var(--cor01);
     text-shadow: 0px 0px 8px #ffffff59;
@@ -156,6 +168,7 @@ a {
 
 #image > img {
     width: 33vw;
+    filter: drop-shadow(0 0px 10px#00ad6f20);
 }
 
 #about-container {
@@ -164,7 +177,7 @@ a {
     justify-content: center;
     text-align: center;
     height:auto;
-    padding-bottom: 50px;
+    padding: 0 0 5rem 0;
     background: var(--cor02);
 }
 
@@ -172,7 +185,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 70px 0px;
+    margin: 80px 0px;
     font-size: 2em;
     color: var(--cor01);
 }
@@ -211,7 +224,7 @@ a {
 
 #description > p {
     text-align: end;
-    font-size: 1.4vw;
+    font-size: 1.3vw;
 }
 
 #image-gleydson {
@@ -320,15 +333,17 @@ a {
 }
 
 #logo-html-hover {
-    width: 295px;
+    width: 125px;
 }
 #logo-css-hover {
     position: relative;
-    top: -35px;
-    width: 370px;
+    top: -15px;
+    width: 155px;
 }
 #logo-js-hover {
-    width: 300px;
+    position: relative;
+    top: -2px;
+    width: 125px;
 }
 
 #description-lang {
@@ -336,7 +351,7 @@ a {
     justify-content: center;
     align-items: center;  
     width: auto;  
-    max-width: 700px;
+    max-width: 80vw;
     padding: 20px;
     border-radius: 15px;
     margin: 50px auto;
@@ -384,11 +399,11 @@ footer a {
 
 /* Hover */
 
-.icon-hover
+.icon-hover, #menu-hamb span
 {
     transition: all .3s ease-out;
 }
-.icon-hover:hover
+.icon-hover:hover, #menu-hamb span:hover
 {
     -webkit-filter: drop-shadow(0px 0px 4px rgba(245, 245, 245, 0.582));
     filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.596));
