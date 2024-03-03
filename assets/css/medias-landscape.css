@@ -1,7 +1,23 @@
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 668px) and (max-width: 1024px) {
+
+    #nick-logo {
+        width: 30%;
+    }
     
-    #header {
-        
+    #nick-logo > p {
+        font-size: 2em;
+    } 
+    
+    #navbar {
+        width: 60vw;
+    }
+    
+    #navbar ul {
+        width: 100%;
+    }
+
+    #navbar ul li {
+        font-size: 20px;
     }
 
     #nick-logo {
@@ -13,16 +29,133 @@
     }
 
     #home {
+        padding: 0 0 0 0;
         height: 90vh;
     }
 
     #name {
         width: 50vw;
-        background-color: lightblue;
+    }
+
+    #name h1 {
+        font-size: 4.5vw;
     }
 
     #image {
         width: 50vw;
-        background-color: lightcoral;
+    }
+
+    #image img {
+        width: 45vw;
+    }
+
+    #social-media {
+        margin: 20px auto 0 auto;
+        width: 86%;
+    }
+
+    .tittle {
+        font-size: 4vw;
+    }
+
+    #description {
+        height: auto;
+        max-height: 580px;
+    }
+
+    #description p{
+        font-size: 1.4vw;
     }
 }
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+
+    
+    #nick-logo {
+        width: 10%;
+        justify-content: flex-start;
+    }
+    
+    #nick-logo > p {
+        font-size: 2em;
+    } 
+    
+    #navbar {
+        justify-content: flex-end;
+        width: 40vw;
+    }
+    
+    #navbar ul {
+        width: 80%;
+    }
+
+    #navbar ul li {
+        font-size: 20px;
+    }
+
+    #nick-logo {
+        width: 40%;
+    }
+
+    #navbar {
+        width: 50%;
+    }
+
+    #home {
+        padding: 0 0 0 0;
+        height: 90vh;
+    }
+
+    #name {
+        width: 50vw;
+    }
+
+    #name h1 {
+        font-size: 4.5vw;
+    }
+
+    #image {
+        width: 50vw;
+    }
+
+    #image img {
+        width: 45vw;
+    }
+
+    #social-media {
+        margin: 20px auto 0 auto;
+        width: 86%;
+    }
+
+    .tittle {
+        font-size: 4vw;
+    }
+
+    #description {
+        height: auto;
+        max-height: 580px;
+    }
+
+    #description p{
+        font-size: 1.4vw;
+    }
+}
+
+
+@media screen and (min-width: 1680px) and (max-width: 1920px) {
+
+    #home {
+        height: 92vh;
+    }
+}
+
+@media screen and (min-width: 1921px) and (max-width: 2560px) {
+    #home {
+        height: 93vh;
+    }
+
+    #description p{ 
+        font-size: 1.1em;
+    }
+}
+

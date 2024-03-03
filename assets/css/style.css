@@ -26,7 +26,7 @@ body,html {
 }
 
 body {
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
     overflow-x: hidden;
     background: var(--cor02);
@@ -45,7 +45,7 @@ body {
 #header {
     position: fixed;
     top: 0px;
-    width: 99vw;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,7 +117,7 @@ a {
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    height: 100vh;
+    height: 90vh;
     padding: 28px 0px;
     background: var(--cor03);
 
