@@ -88,6 +88,10 @@ body {
     width: 100%;
 }
 
+#navbar-mobile {
+    display: none;
+}
+
 a {
     list-style: none;
     text-decoration: none;
