@@ -152,18 +152,19 @@
 
     #logos-lang {
         width: auto;
+        margin: auto;
+        background-color: lightblue;
     }
 
     #logo-html-hover {
-        width: 100px;
+        width: 70px;
     }
     #logo-css-hover {
-        top: -12px;
-        width: 125px;
+        top: -7px;
+        width: 85px;
     }
     #logo-js-hover {
-        top: -1px;
-        width: 100px;
+        width: 70px;
     }
 
     footer p {
