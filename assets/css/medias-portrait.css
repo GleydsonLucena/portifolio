@@ -174,15 +174,6 @@
 }
 
 @media screen and (max-width: 667px) {
-     
-    :root {
-        --cor01: #ffffff;
-        --cor02: #0b0b0b;
-        --cor03: #0f0f0f;
-        --cor04: #00ad6f;
-    
-        --fonte1: "Saira", sans-serif;
-    }
 
     #container {
         padding: 0;

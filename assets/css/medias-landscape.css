@@ -1,0 +1,28 @@
+@media screen and (max-width: 1024px) {
+    
+    #header {
+        
+    }
+
+    #nick-logo {
+        width: 40%;
+    }
+
+    #navbar {
+        width: 50%;
+    }
+
+    #home {
+        height: 90vh;
+    }
+
+    #name {
+        width: 50vw;
+        background-color: lightblue;
+    }
+
+    #image {
+        width: 50vw;
+        background-color: lightcoral;
+    }
+}
