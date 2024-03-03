@@ -37,6 +37,7 @@ body {
 #container {
     background: var(--cor02);
     padding-top: 80px;
+   
 }
 
 /* Cabeçalho */
@@ -119,6 +120,7 @@ a {
     height: 100vh;
     padding: 28px 0px;
     background: var(--cor03);
+
 }
 
 #name {

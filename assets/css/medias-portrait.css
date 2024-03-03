@@ -1,4 +1,4 @@
-@media screen and  (max-width: 375px){ 
+@media screen and  (max-width: 370px){ 
 
     :root {
         --cor01: #ffffff;
@@ -68,11 +68,13 @@
     #name {
         width: 100vw;
         height: 50vh;
+        margin: auto;
         align-items: center;
         justify-content: space-evenly;
     }
 
     #container-nick {
+        margin: auto;
         display: flex;
         flex-direction: column;
     }
@@ -153,7 +155,6 @@
     #logos-lang {
         width: auto;
         margin: auto;
-        background-color: lightblue;
     }
 
     #logo-html-hover {
@@ -170,5 +171,182 @@
     footer p {
         font-size: .6em;
     }
+}
+
+@media screen and (max-width: 667px) {
+     
+    :root {
+        --cor01: #ffffff;
+        --cor02: #0b0b0b;
+        --cor03: #0f0f0f;
+        --cor04: #00ad6f;
     
+        --fonte1: "Saira", sans-serif;
+    }
+
+    #container {
+        padding: 0;
+    }
+    
+    #header {
+        height: auto;
+        min-height: 70px;
+        width: 100vw;
+    }
+
+    #nick-logo {
+        justify-content: flex-start;
+        width: 80vw;
+    }
+
+    #nick-logo > p {
+        font-size: 1.3em;
+    } 
+
+    #navbar {
+        display: none;
+        background-color: blue;
+    }
+
+    #menu-hamb {
+        display: flex;
+        height: 100%;
+        width: 20vw;
+    }
+
+    #menu-hamb span {
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    #navbar-mobile {
+        display: flex;
+        margin-top: 50px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #navbar-mobile ul{
+        display: none;
+        margin-top: 20px;
+        flex-direction: column;
+
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100vh;
+        margin-top: 10px;
+    }
+
+    #name {
+        width: 100vw;
+        height: 30vh;
+        margin: auto;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #container-nick {
+        display: flex;
+        margin: auto;
+        width: 86%;
+        flex-direction: column;
+    }
+
+    #name h1 {
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        align-self: flex-end;
+        font-size: 9vw;
+        font-weight: 400;
+        color: var(--cor04);
+        text-shadow: 0px 0px 10px #00ad6d59;
+    }
+    
+    #name h2 {
+        justify-self: flex-end;
+        font-weight: 100;
+        font-size: 5vw;
+        margin: 0;
+        color: var(--cor01);
+        text-shadow: 0px 0px 8px #ffffff59;
+    }
+    
+    #social-media > a > svg {
+        width: 10vw;
+    }
+
+    #image {
+        width: 100vw;
+        height: 40vh;
+    }
+
+    #image > img {
+        width: 70vw;
+        filter: drop-shadow(0 0px 10px#00ad6f20);
+    }
+
+    .tittle {
+        font-size: 8vw;
+        margin:70px 0 50px 0;
+    }
+
+    #about-me {
+        flex-direction: column-reverse;
+    }
+
+    #image-gleydson img {
+        margin: 0;
+        width: 60vw;
+        border-radius: 15px 15px 0 0;
+    }
+
+    #description {
+        padding: 20px;
+        border-radius: 0 0 15px 15px;
+        width: 60vw;
+        height: auto;
+    }
+
+    #description p {
+        text-align: justify;
+        font-size: 3.8vw;
+    }
+
+    #projects-zone {
+        flex-direction: column;
+        height: auto;
+        width: 40vw;
+        gap: 50px;
+    }
+
+    #explication-projects {
+        width: fit-content;
+        margin: 10px auto;
+        font-size: 1em;
+    }
+
+    #logos-lang {
+        width: auto;
+        margin: auto;
+    }
+
+    #logo-html-hover {
+        width: 90px;
+    }
+    #logo-css-hover {
+        top: -9px;
+        width: 105px;
+    }
+    #logo-js-hover {
+        top: 1px;
+        width: 85px;
+    }
+
+    footer p {
+        font-size: .6em;
+    }
 }
