@@ -106,10 +106,14 @@ a {
     color: var(--cor01);
 }
 
-#menu-hamb {
+#menu-hamb{
     display: none;
     color: white;
     font-size: 2em;
+}
+
+#menu-hamb a {
+    color:white
 }
 
 #home {
