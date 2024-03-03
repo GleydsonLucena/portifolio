@@ -335,6 +335,7 @@ a {
 
 #logos-lang .logo-l {
     cursor: pointer;
+    user-select: none;
 }
 
 #logo-html-hover {
