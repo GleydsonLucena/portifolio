@@ -408,6 +408,7 @@ footer a {
 .icon-hover, #menu-hamb span
 {
     transition: all .3s ease-out;
+    user-select: none;
 }
 .icon-hover:hover, #menu-hamb span:hover
 {
