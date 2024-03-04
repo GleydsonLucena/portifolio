@@ -20,13 +20,13 @@ html.addEventListener('mouseout', msg2=()=> {
 const css = document.getElementById("logo-css-hover");
 const textCss = document.getElementById("css")
 
-css.addEventListener('mouseover', msg=()=> {
+css.addEventListener('mouseover', hover=()=> {
     css.src='assets/image/css-cor.svg';
     textCss.style.display = 'inline';
     text.style.display = 'none';
 })
 
-css.addEventListener('mouseout', msg2=()=> {
+css.addEventListener('mouseout', hover2=()=> {
     css.src='assets/image/css-verde.svg';
     textCss.style.display = 'none';
     text.style.display = 'inline';
@@ -35,13 +35,13 @@ css.addEventListener('mouseout', msg2=()=> {
 const js = document.getElementById("logo-js-hover");
 const textjs = document.getElementById("js"); 
 
-js.addEventListener('mouseover', msg=()=> {
+js.addEventListener('mouseover', hover3=()=> {
     js.src='assets/image/js-cor.svg';
     textjs.style.display = 'inline';
     text.style.display = 'none'
 })
 
-js.addEventListener('mouseout', msg2=()=> {
+js.addEventListener('mouseout', hover4=()=> {
     js.src='assets/image/js-verde.svg';
     textjs.style.display = 'none'
     text.style.display = 'inline'
