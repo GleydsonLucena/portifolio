@@ -1,7 +1,10 @@
+import { makeStyles } from "@mui/styles";
+
 const Home = () => {
+  const classes = useStyles();
   return (
-    <div>
-      <h1>Home</h1>
+    <div className={classes.root}>
+      <h1>Hello World</h1>
     </div>
   );
 };
