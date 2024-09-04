@@ -131,7 +131,11 @@ function Navbar(props) {
     <>
       <AppBar
         component="nav"
-        sx={{ padding: "0", backgroundColor: (theme) => theme.palette.bg.main }}
+        sx={{
+          padding: "0",
+          backgroundColor: (theme) => theme.palette.bg.main,
+          boxShadow: "none",
+        }}
       >
         <Container maxWidth="xl">
           <Tollbar>

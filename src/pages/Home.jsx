@@ -1,4 +1,9 @@
-import { createTheme, styled, ThemeProvider } from "@mui/material/styles";
+import {
+  createTheme,
+  responsiveFontSizes,
+  styled,
+  ThemeProvider,
+} from "@mui/material/styles";
 import Hero from "../sections/Hero";
 import Navbar from "../components/Navbar";
 import About from "../sections/About";
@@ -6,10 +11,10 @@ import Projects from "../sections/Projects";
 import Contact from "../sections/Contact";
 import { Container } from "@mui/material";
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     primary: {
-      main: "##67159C",
+      main: "#67159C",
       contrastText: "#fff",
     },
     secondary: {
@@ -37,7 +42,7 @@ const theme = createTheme({
     "0 0 20px #e7e7e771", // 1
     "0 0 20px #e7e7e7df", // 2
     "0 0 10px #e7e7e739", // 3
-    "none", // 4
+    "0 0 10px #a50a982d", // 4
     "none", // 5
     "none", // 6
     "none", // 7
@@ -52,6 +57,8 @@ const theme = createTheme({
     "0px 6px 10px rgba(0,0,0,0.15), 0px 1px 5px rgba(0,0,0,0.1)", // 16
   ],
 });
+
+theme = responsiveFontSizes(theme);
 
 const StyledHome = styled("main")`
   background-color: ${({ theme }) => theme.palette.bg.main};
