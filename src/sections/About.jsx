@@ -1,5 +1,11 @@
+import SectionsContainer from "../layouts/SectionsContainer";
+
 const About = () => {
-  return <div>About</div>;
+  return (
+    <SectionsContainer title="Sobre mim" id="sobre">
+      About
+    </SectionsContainer>
+  );
 };
 
 export default About;

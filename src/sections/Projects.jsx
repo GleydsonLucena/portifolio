@@ -1,5 +1,11 @@
+import SectionsContainer from "../layouts/SectionsContainer";
+
 const Projects = () => {
-  return <div>Projects</div>;
+  return (
+    <SectionsContainer title="Projetos" id="projetos">
+      Projetos
+    </SectionsContainer>
+  );
 };
 
 export default Projects;

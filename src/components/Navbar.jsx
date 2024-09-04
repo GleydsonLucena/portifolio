@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
+import PropTypes from "prop-types";
 import MenuIcon from "@mui/icons-material/Menu";
 import styled from "@mui/material/styles/styled";
-import PropTypes from "prop-types";
 import {
   AppBar,
   Box,
@@ -9,14 +10,12 @@ import {
   Divider,
   Drawer,
   IconButton,
+  keyframes,
   List,
-  ListItem,
-  ListItemButton,
   ListItemText,
   Toolbar,
   Typography,
 } from "@mui/material";
-import { NavLink } from "react-router-dom";
 
 const StyledSpan = styled("span")`
   font-weight: ${(props) => (props.fontWeight ? props.fontWeight : 100)};
@@ -28,16 +27,63 @@ const Tollbar = styled(Toolbar)`
   padding: 0 !important;
 `;
 
-const StyledNavLink = styled(NavLink)`
-  color: ${({ theme }) => theme.palette.primary.contrastText};
-  text-decoration: none;
+const HoverAniamtion = keyframes`
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+`;
 
-  &.active {
-    color: white;
+const StyledLink = styled(Link)`
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 1rem 0.5rem;
+  margin-right: 2rem;
+  color: ${({ theme }) => theme.palette.primary.contrastText};
+  transition: all 300ms ease;
+
+  &:hover {
+    color: ${({ theme }) => theme.palette.primary.contrastText};
+    text-shadow: ${({ theme }) => theme.shadows[3]};
   }
 
-  &.inactive {
-    color: red;
+  &:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.5rem;
+    width: 100%;
+    height: 0.3rem;
+    border-radius: 1rem;
+    background: linear-gradient(to right, #67159c, #1e1e26);
+    animation: ${HoverAniamtion} 300ms ease;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
+`;
+
+const ContactButton = styled(Link)`
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: #67159c;
+  color: white;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 300ms ease;
+
+  &:hover {
+    background: #67159c;
+    text-shadow: ${({ theme }) => theme.shadows[2]};
   }
 `;
 
@@ -55,7 +101,7 @@ function Navbar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography
-        variant="h3"
+        variant="h2"
         fontSize={{ xs: "1.3rem", sm: "2rem" }}
         sx={{ my: 2 }}
       >
@@ -64,11 +110,15 @@ function Navbar(props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
+          <StyledLink to={item.toLowerCase()} smooth={true} key={item}>
+            <ListItemText
+              onClick={handleDrawerToggle}
+              primary={item}
+              sx={{
+                color: "black",
+              }}
+            />
+          </StyledLink>
         ))}
       </List>
     </Box>
@@ -96,33 +146,46 @@ function Navbar(props) {
             </IconButton>
             <Typography
               variant="h1"
-              component="div"
+              component={Link}
+              to="inicio"
+              smooth={true}
               sx={{
+                cursor: "pointer",
                 flexGrow: 1,
                 display: { xs: "block", sm: "block" },
                 textAlign: { xs: "center", sm: "left" },
                 fontSize: { xs: "1.3rem", sm: "2rem" },
                 fontWeight: "400",
                 letterSpacing: "0.1px",
-                padding: "1.3rem",
+                padding: "1.5rem 0",
+                textShadow: (theme) => theme.shadows[0],
               }}
             >
               <StyledSpan fontWeight="600">{"<"}</StyledSpan> Gleydson{" "}
               <StyledSpan>Lucena</StyledSpan> {">"}
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              <List sx={{ display: "flex", justifyContent: "center", gap: 3 }}>
-                {navItems.map((item) => (
-                  <StyledNavLink
-                    to={`/${item.toLowerCase()}`}
-                    className={({ isActive }) =>
-                      isActive ? "active" : "inactive"
-                    }
-                    key={item}
-                  >
-                    {item}
-                  </StyledNavLink>
-                ))}
+              <List sx={{ display: "flex", justifyContent: "center" }}>
+                {navItems.map((item) =>
+                  item === "Contato" ? (
+                    <ContactButton
+                      key={item}
+                      to={item.toLowerCase()}
+                      smooth={true}
+                      variant="contained"
+                    >
+                      {item}
+                    </ContactButton>
+                  ) : (
+                    <StyledLink
+                      to={item.toLowerCase()}
+                      smooth={true}
+                      key={item}
+                    >
+                      {item}
+                    </StyledLink>
+                  )
+                )}
               </List>
             </Box>
           </Tollbar>
@@ -153,10 +216,6 @@ function Navbar(props) {
 }
 
 Navbar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 

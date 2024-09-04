@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import About from "../sections/About";
 import Projects from "../sections/Projects";
 import Contact from "../sections/Contact";
+import { Container } from "@mui/material";
 
 const theme = createTheme({
   palette: {
@@ -29,13 +30,13 @@ const theme = createTheme({
     fontFamily: "Saira",
   },
   shape: {
-    borderRadius: 8,
+    borderRadius: 6,
   },
   shadows: [
     "0 0 20px #66159cbc", // span
-    "none", // 1
-    "none", // 2
-    "none", // 3
+    "0 0 20px #e7e7e771", // 1
+    "0 0 20px #e7e7e7df", // 2
+    "0 0 10px #e7e7e739", // 3
     "none", // 4
     "none", // 5
     "none", // 6
@@ -54,6 +55,7 @@ const theme = createTheme({
 
 const StyledHome = styled("main")`
   background-color: ${({ theme }) => theme.palette.bg.main};
+  padding: 0;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -63,14 +65,17 @@ const StyledHome = styled("main")`
 `;
 
 const Home = () => {
+  console.log(theme);
   return (
     <ThemeProvider theme={theme}>
       <StyledHome>
         <Navbar />
-        <Hero />
-        <About />
-        <Projects />
-        <Contact />
+        <Container maxWidth="xl">
+          <Hero />
+          <About />
+          <Projects />
+          <Contact />
+        </Container>
       </StyledHome>
     </ThemeProvider>
   );
