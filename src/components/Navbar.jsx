@@ -1,109 +1,163 @@
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
+import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+import styled from "@mui/material/styles/styled";
+import PropTypes from "prop-types";
+import {
+  AppBar,
+  Box,
+  Container,
+  Divider,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const StyledSpan = styled("span")`
+  font-weight: ${(props) => (props.fontWeight ? props.fontWeight : 100)};
+  color: #67159c !important;
+  text-shadow: ${({ theme }) => theme.shadows[0]};
+`;
+
+const Tollbar = styled(Toolbar)`
+  padding: 0 !important;
+`;
+
+const StyledNavLink = styled(NavLink)`
+  color: ${({ theme }) => theme.palette.primary.contrastText};
+  text-decoration: none;
+
+  &.active {
+    color: white;
+  }
+
+  &.inactive {
+    color: red;
+  }
+`;
+
+const drawerWidth = 240;
+const navItems = ["Inicio", "Sobre", "Projetos", "Contato"];
+
+function Navbar(props) {
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+      <Typography
+        variant="h3"
+        fontSize={{ xs: "1.3rem", sm: "2rem" }}
+        sx={{ my: 2 }}
+      >
+        Gleydson <StyledSpan>Lucena</StyledSpan>
+      </Typography>
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemText primary={item} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
+
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
-            variant="h1"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Gleydson Lucena
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+    <>
+      <AppBar
+        component="nav"
+        sx={{ padding: "0", backgroundColor: (theme) => theme.palette.bg.main }}
+      >
+        <Container maxWidth="xl">
+          <Tollbar>
             <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
               color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" } }}
             >
               <MenuIcon />
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
+            <Typography
+              variant="h1"
+              component="div"
+              sx={{
+                flexGrow: 1,
+                display: { xs: "block", sm: "block" },
+                textAlign: { xs: "center", sm: "left" },
+                fontSize: { xs: "1.3rem", sm: "2rem" },
+                fontWeight: "400",
+                letterSpacing: "0.1px",
+                padding: "1.3rem",
               }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              sx={{ display: { xs: "block", md: "none" } }}
-            ></Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}></Box>
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-            ></Menu>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+            >
+              <StyledSpan fontWeight="600">{"<"}</StyledSpan> Gleydson{" "}
+              <StyledSpan>Lucena</StyledSpan> {">"}
+            </Typography>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              <List sx={{ display: "flex", justifyContent: "center", gap: 3 }}>
+                {navItems.map((item) => (
+                  <StyledNavLink
+                    to={`/${item.toLowerCase()}`}
+                    className={({ isActive }) =>
+                      isActive ? "active" : "inactive"
+                    }
+                    key={item}
+                  >
+                    {item}
+                  </StyledNavLink>
+                ))}
+              </List>
+            </Box>
+          </Tollbar>
+        </Container>
+      </AppBar>
+      <nav>
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true,
+          }}
+          sx={{
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </nav>
+    </>
   );
+}
+
+Navbar.propTypes = {
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
 };
 
 export default Navbar;
