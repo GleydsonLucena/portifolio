@@ -1,7 +1,32 @@
-import { Box, keyframes, Typography } from "@mui/material";
-import { Grid2 } from "@mui/material";
+import { Grid2, keyframes, Typography } from "@mui/material";
 import SectionsContainer from "../layouts/SectionsContainer";
 import styled from "@mui/material/styles/styled";
+
+import reactSVG from "../assets/react.svg";
+import javascriptSVG from "../assets/javascript.svg";
+
+const StyledTitleContent = styled("h2")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  color: theme.palette.primary.contrastText,
+  textShadow: theme.shadows[0],
+
+  [theme.breakpoints.up("xs")]: {
+    fontSize: "1.3rem",
+  },
+
+  ".arrow": {
+    fontWeight: 600,
+    color: theme.palette.primary.contrastText,
+    textShadow: theme.shadows[0],
+  },
+
+  ".dot": {
+    color: theme.palette.primary.contrastText,
+    fontWeight: 600,
+    textShadow: theme.shadows[0],
+  },
+}));
 
 const LineAnimation = keyframes`
   0% {
@@ -12,107 +37,138 @@ const LineAnimation = keyframes`
   }
 `;
 
-const StyledContentHero = styled("h2")`
-  position: relative;
-  font-size: 6rem !important;
-  font-weight: 500 !important;
-  color: ${({ theme }) => theme.palette.primary.contrastText};
-  text-shadow: ${({ theme }) => theme.shadows[3]};
-  width: max-content;
+const StyleTitle = styled("h2")(({ theme }) => ({
+  position: "relative",
+  width: "max-content",
+  color: theme.palette.bg.contrastText,
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.5rem;
-    width: 100%;
-    height: 0.4rem;
-    border-radius: 1rem;
-    background: linear-gradient(to right, #67159c, #1e1e26 100%);
-    animation: ${LineAnimation} 1200ms alternate infinite;
+  [theme.breakpoints.up("xs")]: {
+    width: "100%",
+    fontSize: "2.5rem",
+  },
+
+  span: {
+    color: theme.palette.primary.main,
+  },
+
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    left: 0,
+    bottom: "-0.5rem",
+    width: "100%",
+    height: "0.4rem",
+    borderRadius: "1rem",
+    background: "linear-gradient(to right, #67159c, #1e1e26 100%)",
+    animation: `${LineAnimation} 1200ms alternate infinite`,
+  },
+}));
+
+const RotateAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
   }
-
-  span {
-    display: block;
-    font-weight: 100;
-    font-size: 2rem;
-    color: ${({ theme }) => theme.palette.primary.main};
-    text-shadow: ${({ theme }) => theme.shadows[0]};
-
-    &.arrow {
-      display: inline;
-      color: ${({ theme }) => theme.palette.primary.contrastText} !important;
-      font-size: 2rem !important;
-      width: max-content !important;
-    }
-
-    &:last-child {
-      display: inline;
-      height: max-content;
-      font-size: 6rem;
-      color: ${({ theme }) => theme.palette.primary.main};
-      text-shadow: ${({ theme }) => theme.shadows[5]};
-    }
+  100% {
+    transform: rotate(360deg);
   }
 `;
 
-const StyledParag = styled("p")`
-  font-size: 1.3rem;
-  margin-top: 3rem !important;
-  color: ${({ theme }) => theme.palette.primary.contrastText};
-  text-shadow: ${({ theme }) => theme.shadows[3]};
+const StyledImg = styled("img")(() => ({
+  "&#react": {
+    filter: "drop-shadow(0 0 20px #66159c92)",
+    animation: `${RotateAnimation} 15s linear infinite`,
+  },
 
-  span {
-    color: ${({ theme }) => theme.palette.primary.main};
-    width: 8rem;
-  }
-`;
+  "&#js": {
+    position: "absolute",
+    bottom: "50%",
+    left: "50%",
+    transform: "translate(-50%, 50%)",
+    width: "13%",
+
+    filter: "drop-shadow(0 0 20px #e7e7e771)",
+  },
+}));
 
 const Hero = () => {
   return (
-    <SectionsContainer title="" id="inicio">
-      <Box
-        component="div"
-        maxWidth="xl"
+    <SectionsContainer id="inicio">
+      <Grid2
+        container
+        spacing={1}
+        height="80vh"
+        direction={{ xs: "column", md: "row" }}
         sx={{
-          width: "100%",
-          height: "80vh",
           display: "flex",
-          justifyContent: "center",
           alignItems: "center",
         }}
       >
         <Grid2
-          container
-          spacing={2}
           sx={{
-            width: "100% ",
-            justifyContent: "space-between",
+            maxHeight: { xs: "35vh", md: "100vh" },
+            height: "100%",
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            sx: {
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            },
           }}
         >
-          <Grid2 item size={6}>
-            <Typography variant="h2" component={StyledContentHero}>
-              <span>
-                <span className="arrow">{"< "}</span>Desenvolvedor front-end
-                <span className="arrow">{" / >"}</span>
-              </span>
-              Gleydson Lucena<span>.</span>
-            </Typography>
-            <Typography variant="body1" component={StyledParag}>
-              Olá, bem vindo ao meu portifólio, meu nome é Gleydson,sou
-              desenvolvedor front end. Meu primeiro contato com programação foi
-              em 2021, onde realizei as primeiras linhas de código, desde então
-              sigo aprimorando cada vez mais meus conhecimentos e habilidades
-              <span>.</span>
-            </Typography>
-          </Grid2>
-          <Grid2 item size={5}>
-            Teste Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Error numquam, ullam autem quae minima accusamus dicta est ratione
-            nesciunt obcaecati odit sit beatae ea nostrum magni, ex fuga harum.{" "}
-          </Grid2>
+          <Typography
+            variant="h5"
+            component={StyledTitleContent}
+            gutterBottom
+            sx={{
+              fontWeight: 100,
+              margin: "0",
+              color: (theme) => theme.palette.primary.main,
+            }}
+          >
+            <span className="arrow">{"< "}</span>
+            Desenvolvedor front end
+            <span className="dot">.</span>
+            <span className="arrow">{" / >"}</span>
+          </Typography>
+          <Typography
+            variant="h2"
+            component={StyleTitle}
+            fontWeight={{ xs: 500, md: 600 }}
+            sx={{
+              mb: 3,
+            }}
+          >
+            Gleydson Lucena<span>.</span>
+          </Typography>
+          <Typography
+            variant="subtitle2"
+            component={"p"}
+            sx={{
+              color: (theme) => theme.palette.bg.contrastText,
+              fontWeight: 300,
+            }}
+          >
+            Olá, bem vindo ao meu portifólio, sou desenvolvedor front end,
+            desenvolvo interfaces elegantes garantindo a melhor experiência do
+            ususário
+          </Typography>
         </Grid2>
-      </Box>
+
+        <Grid2
+          maxHeight={{ xs: "43vh", md: "100vh" }}
+          sx={{
+            position: "relative",
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <StyledImg id="react" src={reactSVG} alt="logo react" width="100%" />
+          <StyledImg id="js" src={javascriptSVG} alt="logo javascript" />
+        </Grid2>
+      </Grid2>
     </SectionsContainer>
   );
 };

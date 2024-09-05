@@ -15,7 +15,7 @@ const StyledSectionsContainer = styled("section")`
 const SectionsContainer = ({ children, title, id }) => {
   return (
     <StyledSectionsContainer id={id}>
-      <Typography variant="h2" component="h2" gutterBottom>
+      <Typography variant="h2" component="h3" gutterBottom>
         {title}
       </Typography>
       {children}

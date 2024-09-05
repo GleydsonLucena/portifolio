@@ -103,7 +103,7 @@ function Navbar(props) {
       <Typography
         variant="h2"
         fontSize={{ xs: "1.3rem", sm: "2rem" }}
-        sx={{ my: 2 }}
+        sx={{ my: 2, color: (theme) => theme.palette.bg.contrastText }}
       >
         Gleydson <StyledSpan>Lucena</StyledSpan>
       </Typography>
@@ -115,7 +115,7 @@ function Navbar(props) {
               onClick={handleDrawerToggle}
               primary={item}
               sx={{
-                color: "black",
+                color: (theme) => theme.palette.bg.contrastText,
               }}
             />
           </StyledLink>
@@ -209,6 +209,7 @@ function Navbar(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: (theme) => theme.palette.bg.dark,
             },
           }}
         >
