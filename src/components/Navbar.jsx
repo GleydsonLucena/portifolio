@@ -102,7 +102,7 @@ function Navbar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography
         variant="h2"
-        fontSize={{ xs: "1.3rem", sm: "2rem" }}
+        fontSize={{ xs: "1.3rem", sm: "1.5rem" }}
         sx={{ my: 2, color: (theme) => theme.palette.bg.contrastText }}
       >
         Gleydson <StyledSpan>Lucena</StyledSpan>
@@ -138,13 +138,19 @@ function Navbar(props) {
         }}
       >
         <Container maxWidth="xl">
-          <Tollbar>
+          <Tollbar
+            sx={{
+              width: "100%",
+              display: { sm: "flex" },
+              justifyContent: { sm: "space-between" },
+            }}
+          >
             <IconButton
               color="inherit"
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
+              sx={{ mr: 2 }}
             >
               <MenuIcon />
             </IconButton>
@@ -156,20 +162,20 @@ function Navbar(props) {
               sx={{
                 cursor: "pointer",
                 flexGrow: 1,
-                display: { xs: "block", sm: "block" },
-                textAlign: { xs: "center", sm: "left" },
-                fontSize: { xs: "1.3rem", sm: "2rem" },
+                display: { xs: "block", sm: "none" },
+                textAlign: { xs: "center" },
+                fontSize: { xs: "1.3rem" },
                 fontWeight: "400",
                 letterSpacing: "0.1px",
                 padding: "1.5rem 0",
                 textShadow: (theme) => theme.shadows[0],
               }}
             >
-              <StyledSpan fontWeight="600">{"<"}</StyledSpan> Gleydson{" "}
+              <StyledSpan fontWeight="600">{"<"}</StyledSpan> Gleydson
               <StyledSpan>Lucena</StyledSpan> {">"}
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              <List sx={{ display: "flex", justifyContent: "center" }}>
+              <List sx={{ display: "flex", justifyContent: "center", my: 1 }}>
                 {navItems.map((item) =>
                   item === "Contato" ? (
                     <ContactButton
@@ -205,7 +211,7 @@ function Navbar(props) {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { xs: "block", sm: "block" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
