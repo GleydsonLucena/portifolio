@@ -11,10 +11,6 @@ const StyledTitleContent = styled("h2")(({ theme }) => ({
   color: theme.palette.primary.contrastText,
   textShadow: theme.shadows[0],
 
-  [theme.breakpoints.up("xs")]: {
-    fontSize: "1.3rem",
-  },
-
   ".arrow": {
     fontWeight: 600,
     color: theme.palette.primary.contrastText,
@@ -74,6 +70,9 @@ const RotateAnimation = keyframes`
 `;
 
 const StyledImg = styled("img")(() => ({
+  margin: "0 auto",
+  width: "70%",
+
   "&#react": {
     filter: "drop-shadow(0 0 20px #66159c92)",
     animation: `${RotateAnimation} 15s linear infinite`,
@@ -96,8 +95,8 @@ const Hero = () => {
       <Grid2
         container
         spacing={1}
-        height="80vh"
-        direction={{ xs: "column", md: "row" }}
+        height={{ xs: "80vh", sm: "90vh" }}
+        direction={{ xs: "column", sm: "column" }}
         sx={{
           display: "flex",
           alignItems: "center",
@@ -105,14 +104,20 @@ const Hero = () => {
       >
         <Grid2
           sx={{
-            maxHeight: { xs: "35vh", md: "100vh" },
+            maxHeight: { xs: "35vh", sm: "34vh" },
             height: "100%",
             display: "flex",
-            flexDirection: { xs: "column", md: "row" },
+            justifyContent: "center",
+            flexDirection: { xs: "column", sm: "column" },
             sx: {
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              xs: {
+                display: "flex",
+                alignItems: "center",
+              },
+              sm: {
+                display: "flex",
+                alignItems: "center",
+              },
             },
           }}
         >
@@ -120,6 +125,7 @@ const Hero = () => {
             variant="h5"
             component={StyledTitleContent}
             gutterBottom
+            fontSize={{ xs: "1rem", sm: "1.5rem" }}
             sx={{
               fontWeight: 100,
               margin: "0",
@@ -135,8 +141,9 @@ const Hero = () => {
             variant="h2"
             component={StyleTitle}
             fontWeight={{ xs: 500, md: 600 }}
+            fontSize={{ xs: "2.7rem", sm: "5.5rem" }}
             sx={{
-              mb: 3,
+              mb: 5,
             }}
           >
             Gleydson Lucena<span>.</span>
@@ -156,16 +163,17 @@ const Hero = () => {
         </Grid2>
 
         <Grid2
-          maxHeight={{ xs: "43vh", md: "100vh" }}
+          maxHeight={{ xs: "43vh", sm: "55vh" }}
           sx={{
             position: "relative",
+            alignItems: "center",
+            justifyContent: "center",
+            display: "flex",
             width: "100%",
             height: "100%",
-            display: "flex",
-            alignItems: "center",
           }}
         >
-          <StyledImg id="react" src={reactSVG} alt="logo react" width="100%" />
+          <StyledImg id="react" src={reactSVG} alt="logo react" />
           <StyledImg id="js" src={javascriptSVG} alt="logo javascript" />
         </Grid2>
       </Grid2>
