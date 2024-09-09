@@ -146,7 +146,7 @@ const Hero = () => {
               mb: 5,
             }}
           >
-            Gleydson Lucena<span>.</span>
+            Gleydson Lucena
           </Typography>
           <Typography
             variant="subtitle2"
